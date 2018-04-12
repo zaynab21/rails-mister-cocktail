@@ -13,13 +13,12 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    @animal = Cocktail.create(cocktail_params)
+    @cocktail = Cocktail.create(cocktail_params)
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
       render :new
     end
-      redirect_to cocktails.path
   end
 
 
